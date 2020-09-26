@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  oidc: {
+    authority: 'https://auth.wohlben.de/auth/realms/wohlben/.well-known/openid-configuration',
+    redirect_uri: 'http://localhost:4200',
+    client_id: 'wommels',
+    extraQueryParams: {
+      audience: 'wommels'
+    }
+  }
 };
 
 /*

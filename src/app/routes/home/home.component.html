@@ -1,0 +1,6 @@
+<a routerLink="/authenticated">be authenticated</a>
+
+<p>home works</p>
+
+<button *ngIf="(username$|async) !== null" (click)="logout()">logout {{username$|async}}?</button>
+<button (click)="login()">login</button>

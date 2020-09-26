@@ -1,0 +1,8 @@
+<a routerLink="/home">go home</a>
+<p>you're authenticated {{username$|async}}</p>
+<p>you got the following roles on your ID Token:</p>
+<ul *ngIf="(roles$|async)">
+  <li *ngFor="let role of (roles$|async)">{{role}}</li>
+</ul>
+
+<button *ngIf="(username$|async) !== null" (click)="logout()">logout {{username$|async}}?</button>
